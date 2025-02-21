@@ -1,0 +1,610 @@
+/* navbar.css */
+/* Base styles */
+
+/* Initially hide the cards and set up animations */
+/* Ensure all .card elements start hidden and positioned lower */
+/* Define the keyframes for the animation */
+@keyframes fadeInMoveUp {
+  0% {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the element */
+.text-section {
+  opacity: 2;
+  animation: fadeInMoveup 1s forwards;
+}
+
+
+
+
+
+/* Optional hover effect */
+.text-section:hover  {
+  animation: fadeInMoveUp 5.5s forwards;
+}
+
+.symbol {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #6c63ff;
+  font-family: serif;
+  background-color: #f7f6f8;
+  padding: 5px;
+  border-radius: 50%;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease, color 0.3s ease;
+  margin-right: auto;
+}
+
+.symbol:hover {
+ 
+  transform: rotate(360deg);
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #6c63ff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #6c63ff;
+  color: white;
+  font-family: serif;
+  font-size: 18px;
+}
+
+.symbol {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+
+
+nav  li {
+  margin: 0 10px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav  li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  font-family: cursive;
+  font-size: 18px;
+}
+
+nav  li a:hover, nav  li a.active {
+  background-color: #6c21f4;
+  border-radius: 5px;
+}
+
+nav button:hover {
+  background-color: #6c21f4;
+  color: white;
+}
+
+/* Social icons */
+nav .social-icons {
+  display: flex-end;
+  gap: 10px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+nav .social-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Mobile styles */
+.menu-icon {
+  display: block;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 10px;
+  color: white;
+}
+
+
+/* about css  */
+
+
+.text-section {
+  font-size: 100px;
+  max-width: 600px;
+  margin: 0 auto; /* Center horizontally */
+  text-align: center; /* Center text inside the section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  min-height: 100vh; /* Full viewport height */
+}
+
+.text-section h1 {
+  font-size: 40px;
+  color: #01101ed4;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+.text-section p {
+  font-size: 20px;
+}
+
+.text-section img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+
+/* skills.css */
+ body {
+            font-family: cursive;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .skills-section {
+            position: relative;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #6c21f4;
+            color: white;
+            border-radius: 20px;
+            margin: 20px;
+        }
+
+        .skills-section h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            
+            flex-wrap: wrap;
+        }
+
+        .developer-card {
+            background-color: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        .developer-card h2 {
+            color: #6c21f4;
+        }
+
+        .skill-pill {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #6c21f4;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+/* projects.css */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 80%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-text {
+  width: 60%;
+  padding-right: 20px;
+}
+
+.project-image {
+  width: 30%;
+}
+
+.project-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* For the project cards that only have text (like the Portfolio Website) */
+.project-card:last-child {
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card:last-child .project-text {
+  width: 100%;
+  text-align: center;
+}
+
+a {
+  color: #00050a;
+  text-decoration: none;
+}
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* Timeline Header */
+.pp {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #6c21f4;
+  color: white;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+/* Contact Form Container */
+.contact-section {
+    background: linear-gradient(to right, #7b5eff, #2f80ed);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+.contact-section h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact-section .contact-btn {
+    background-color: white;
+    color: #007bff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+}
+
+.contact-section .contact-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.contact-section .download-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.contact-section .download-btn:hover {
+    background-color: #218838;
+}
+
+
+/* Experience Section Container */
+#experience-academic {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.academic-section, .internship-section {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pp {
+  text-align: center;
+  padding: 20px;
+  background-color: #6c21f4;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experience {
+  display: flex;
+  gap: 10px;
+}
+
+.date {
+  min-width: 100px;
+  font-weight: bold;
+  color: #6c21f4;
+}
+
+.contt h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.contt p {
+  margin: 5px 0 0;
+  color: #555;
+}
+/* Default styles */
+#experience-academic {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.academic-section, .internship-section {
+  padding: 20px;
+}
+
+.pp h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.timeline .experience {
+  margin-bottom: 20px;
+}
+
+.date {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.contt h4 {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.contt p {
+  font-size: 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: serif;
+}
+.footer {
+  background-color: #6c63ff;
+  color: rgb(246, 241, 241);
+  text-align: center;
+  width: 100vw;
+  margin-top: 50px;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.footer h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.footer nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer nav a:hover {
+  color: #ddd;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ddd;
+}
+
+.copyright {
+  font-size: 0.8em;
+  margin-top: 15px;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.form-section .form-text {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.form-section .form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input[type="text"], .form-container input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+.footpath {
+  background-color: #f1f1f1;
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9em;
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  width: 100vw;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skills-container {
+    flex-direction: column;
+  }
+
+  .developer-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .projects-container {
+    flex-direction: column;
+  }
+
+  .project-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 20px 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .text-section p {
+    font-size: 1rem;
+  }
+
+  .skills-container {
+    gap: 10px;
+  }
+
+  .project-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .footer .name h1 {
+    font-size: 1.5rem;
+  }
+}

@@ -4,31 +4,33 @@
 /* Initially hide the cards and set up animations */
 /* Ensure all .card elements start hidden and positioned lower */
 /* Define the keyframes for the animation */
-@keyframes fadeInMoveUp {
+/* Default hidden state */
+/* Initially hidden state */
+.scroll-animated-element {
+  opacity: 0;
+  transform: translateY(100px); /* Start off-screen */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Show the element when in the viewport */
+.scroll-animated-element.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Jump Effect */
+@keyframes jumpEffect {
   0% {
-      opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(30px);
+  }
+  50% {
+      transform: translateY(-10px);
   }
   100% {
-      opacity: 1;
       transform: translateY(0);
   }
 }
 
-/* Apply the animation to the element */
-.text-section {
-  opacity: 2;
-  animation: fadeInMoveup 1s forwards;
-}
-
-
-
-
-
-/* Optional hover effect */
-.text-section:hover  {
-  animation: fadeInMoveUp 5.5s forwards;
-}
 
 .symbol {
   font-weight: bold;
@@ -67,8 +69,11 @@ nav {
   padding: 10px 20px;
   background-color: #6c63ff;
   color: white;
-  font-family: serif;
+  
   font-size: 18px;
+}
+nav, nav li a {
+  font-family: 'Poppins', sans-serif;
 }
 
 .symbol {
@@ -93,7 +98,7 @@ nav  li a {
   text-decoration: none;
   padding: 10px 20px;
   transition: all 0.3s ease;
-  font-family: cursive;
+  font-family: serif;
   font-size: 18px;
 }
 
@@ -171,7 +176,8 @@ nav .social-icons a {
 
 /* skills.css */
  body {
-            font-family: cursive;
+           
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -542,11 +548,19 @@ body {
   width: 100vw;
   box-sizing: border-box;
 }
+body, nav {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
 @media screen and (max-width: 768px) {
   nav {
     flex-direction: column;
     align-items: flex-start;
+    font-family: serif;
   }
+
 
   nav ul {
     flex-direction: column;

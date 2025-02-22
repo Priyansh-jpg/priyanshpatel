@@ -109,13 +109,47 @@
 .social-icons{
   color: white;
 }
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .contact-info,
+  .footer .name-box,
+  .footer .social-nav {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer .name-box {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .name-box {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .footer .contact-info,
+  .footer .social-nav {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
 
 
 
-     contact {
+.contact {
   background: #e5ecfb;
   min-height: 60vh;
- 
 }
 .contact .container {
   max-width: 1050px;
@@ -247,6 +281,7 @@ form .button-area {
 .button-area button:hover i {
   left: 8px;
 }
+
 /* contact section media queries starts */
 @media (max-width: 900px) {
   .contact {
@@ -259,13 +294,35 @@ form .button-area {
     padding: 18px 12px;
   }
   .contact .content .image-box {
-    display: none;
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .contact .content .image-box img {
+    height: auto;
   }
   .contact .content form {
     width: 100%;
-    margin-right: 2rem;
+    margin-right: 0;
   }
 }
+
+@media (max-width: 600px) {
+  .contact {
+    min-height: 80vh;
+  }
+  .contact .container {
+    margin: 3rem 1rem 2rem 1rem;
+  }
+  .contact .content {
+    padding: 12px 8px;
+    flex-direction: column;
+  }
+  .contact .content .image-box {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .contact .content form {
+    width
   </style>
 </head>
 <body>
